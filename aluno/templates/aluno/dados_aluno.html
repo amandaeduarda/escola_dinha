@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <!-- CSS only -->   
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <h1>{{ title }}</h1>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Turma</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for aluno in alunos %}
+                <tr>
+                    <th scope="row">{{ aluno.nome }}</th>
+                    <td>{{ aluno.turma }}</td>
+                </tr>
+                {% endfor %}
+             </tbody>
+        </table>
+        <div class="alert alert-primary" role="alert">
+            A Amanda é muito legal <a href="https://www.google.com.br/search?sxsrf=ALeKk02s2OdmSQ4Qc4tvVLM8urtq7TQGqw%3A1599939839267&source=hp&ei=_yRdX7WpDMTC5OUP0KqcYA&q=amanda+legal&oq=amanda+legal&gs_lcp=CgZwc3ktYWIQAzIFCAAQywEyBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB46BwgjEOoCECc6BAgjECc6BAgAEEM6BQgAELEDOgcIABCxAxBDOgIIADoICAAQsQMQgwE6BwgAEAoQywE6CAgAEBYQChAeUNYnWOJFYLhHaANwAHgAgAHnAYgB7gySAQYxLjExLjGYAQCgAQGqAQdnd3Mtd2l6sAEK&sclient=psy-ab&ved=0ahUKEwj1pJyusOTrAhVEIbkGHVAVBwwQ4dUDCAc&uact=5" class="alert-link">Clique aqui</a>. Give it a click if you like.
+        </div>
+    </body>
+</html>
